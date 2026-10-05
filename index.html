@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ViajePlus - Explora el mundo</title>
+    <link rel="stylesheet" href="static/css/style.css">
+</head>
+<body>
+
+    <!-- NAVEGACIÓN -->
+    <nav class="navbar">
+        <div class="logo">
+            <!-- ZONA DE IMAGEN: Logo -->
+            <div class="logo-placeholder"></div>
+            <span>ViajePlus</span>
+        </div>
+        
+        <!-- Enlaces (Solo Desktop) -->
+        <ul class="nav-links">
+            <li><a href="#" class="active">Inicio</a></li>
+            <li><a href="#">Destinos</a></li>
+            <li><a href="#">Promociones</a></li>
+            <li><a href="#">Contacto</a></li>
+        </ul>
+
+        <!-- Buscador (Solo Desktop) -->
+        <div class="search-box">
+            <input type="text" placeholder="Buscar...">
+        </div>
+
+        <!-- Menú Hamburguesa (Tablet y Móvil) -->
+        <div class="hamburger">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+    </nav>
+
+    <main>
+        <!-- SECCIÓN HERO -->
+        <section class="hero">
+            <div class="hero-content">
+                <h1>Explora<br>el mundo</h1>
+                <p>Encuentra tu próximo destino<br>y vive nuevas experiencias.</p>
+                <button class="btn-primary">Ver destinos</button>
+            </div>
+            <div class="hero-image-slider">
+                <!-- ZONA DE IMAGEN: Imagen principal del Hero -->
+                <div class="image-placeholder main-img"></div>
+                <div class="slider-dots">
+                    <span class="dot active"></span>
+                    <span class="dot"></span>
+                    <span class="dot"></span>
+                </div>
+            </div>
+        </section>
+
+        <!-- SECCIÓN DESTINOS DESTACADOS -->
+        <section class="destinations">
+            <div class="section-header">
+                <h2>Destinos destacados</h2>
+                <a href="#" class="link-all">Ver todos &rarr;</a>
+            </div>
+
+            <div class="cards-container">
+                <!-- Tarjeta 1 -->
+                <article class="card">
+                    <!-- ZONA DE IMAGEN: Torres del Paine -->
+                    <div class="card-image image-placeholder"></div>
+                    <div class="card-content">
+                        <h3>Torres del Paine</h3>
+                        <span class="country">Chile</span>
+                        <button class="btn-primary btn-small">Ver más</button>
+                    </div>
+                </article>
+
+                <!-- Tarjeta 2 -->
+                <article class="card">
+                    <!-- ZONA DE IMAGEN: Cusco -->
+                    <div class="card-image image-placeholder"></div>
+                    <div class="card-content">
+                        <h3>Cusco</h3>
+                        <span class="country">Perú</span>
+                        <button class="btn-primary btn-small">Ver más</button>
+                    </div>
+                </article>
+
+                <!-- Tarjeta 3 -->
+                <article class="card">
+                    <!-- ZONA DE IMAGEN: Cancún -->
+                    <div class="card-image image-placeholder"></div>
+                    <div class="card-content">
+                        <h3>Cancún</h3>
+                        <span class="country">México</span>
+                        <button class="btn-primary btn-small">Ver más</button>
+                    </div>
+                </article>
+
+                <!-- Tarjeta 4 -->
+                <article class="card">
+                    <!-- ZONA DE IMAGEN: Madrid -->
+                    <div class="card-image image-placeholder"></div>
+                    <div class="card-content">
+                        <h3>Madrid</h3>
+                        <span class="country">España</span>
+                        <button class="btn-primary btn-small">Ver más</button>
+                    </div>
+                </article>
+            </div>
+        </section>
+    </main>
+
+    <!-- PIE DE PÁGINA (FOOTER) -->
+    <footer class="footer">
+        <div class="footer-logo">
+            <div class="logo-placeholder"></div>
+            <span>ViajePlus</span>
+        </div>
+        
+        <div class="footer-links destinos-links">
+            <h4>Destinos</h4>
+            <ul>
+                <li><a href="#">Chile</a></li>
+                <li><a href="#">Perú</a></li>
+                <li><a href="#">México</a></li>
+                <li><a href="#">Europa</a></li>
+            </ul>
+        </div>
+
+        <div class="footer-links ayuda-links">
+            <h4>Ayuda</h4>
+            <ul>
+                <li><a href="#">Preguntas frecuentes</a></li>
+                <li><a href="#">Términos y condiciones</a></li>
+                <li><a href="#">Contacto</a></li>
+            </ul>
+        </div>
+
+        <div class="footer-social">
+            <div class="social-icons">
+                <span class="icon">F</span> <!-- Reemplazar con iconos reales -->
+                <span class="icon">I</span>
+                <span class="icon">Y</span>
+            </div>
+            <p>&copy; 2024 ViajePlus</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

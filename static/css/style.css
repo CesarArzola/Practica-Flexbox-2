@@ -1,0 +1,319 @@
+/* Reseteo básico y variables */
+:root {
+    --primary-blue: #0056e0;
+    --light-gray: #f2f2f2;
+    --border-color: #e0e0e0;
+    --text-dark: #1a1a1a;
+    --text-gray: #555;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+}
+
+body {
+    background-color: #ffffff;
+    color: var(--text-dark);
+}
+
+/* Clases utilitarias de imagen para replicar el wireframe */
+.image-placeholder {
+    background-color: #cccccc;
+    background-image: linear-gradient(to bottom right, transparent 49%, #999 49%, #999 51%, transparent 51%),
+                      linear-gradient(to top right, transparent 49%, #999 49%, #999 51%, transparent 51%);
+}
+
+.logo-placeholder {
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    background-color: var(--primary-blue);
+    margin-right: 10px;
+}
+
+/* ================= NAV ================= */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 20px;
+    border-bottom: 1px solid var(--border-color);
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    font-size: 1.2rem;
+    font-weight: bold;
+}
+
+.nav-links, .search-box {
+    display: none; /* Oculto en móvil por defecto */
+}
+
+.hamburger {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    cursor: pointer;
+}
+
+.hamburger span {
+    width: 25px;
+    height: 3px;
+    background-color: var(--text-dark);
+    border-radius: 2px;
+}
+
+/* ================= HERO ================= */
+.hero {
+    display: flex;
+    flex-direction: column;
+    background-color: var(--light-gray);
+    padding: 40px 20px;
+    gap: 30px;
+}
+
+.hero-content h1 {
+    font-size: 2.5rem;
+    line-height: 1.1;
+    margin-bottom: 15px;
+}
+
+.hero-content p {
+    color: var(--text-gray);
+    margin-bottom: 20px;
+}
+
+.btn-primary {
+    background-color: var(--primary-blue);
+    color: white;
+    border: none;
+    padding: 12px 24px;
+    border-radius: 4px;
+    font-size: 1rem;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+.hero-image-slider {
+    width: 100%;
+}
+
+.main-img {
+    width: 100%;
+    height: 250px;
+    border-radius: 4px;
+    margin-bottom: 10px;
+}
+
+.slider-dots {
+    display: flex;
+    justify-content: center;
+    gap: 8px;
+}
+
+.dot {
+    width: 12px;
+    height: 12px;
+    background-color: #bbbbbb;
+    border-radius: 50%;
+}
+.dot.active {
+    background-color: var(--primary-blue);
+}
+
+/* ================= DESTINOS ================= */
+.destinations {
+    padding: 40px 20px;
+}
+
+.section-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    margin-bottom: 20px;
+}
+
+.link-all {
+    color: var(--primary-blue);
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.cards-container {
+    display: flex;
+    flex-direction: column; /* Móvil por defecto */
+    gap: 15px;
+}
+
+/* Tarjeta Móvil: Layout Horizontal */
+.card {
+    display: flex;
+    flex-direction: row; 
+    border: 1px solid var(--border-color);
+    border-radius: 6px;
+    overflow: hidden;
+}
+
+.card-image {
+    width: 40%;
+    min-height: 120px;
+}
+
+.card-content {
+    width: 60%;
+    padding: 15px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.card-content h3 { font-size: 1.1rem; }
+.card-content .country { color: var(--text-gray); font-size: 0.9rem; margin-bottom: 10px; }
+
+.btn-small {
+    padding: 8px 0;
+    width: 100%;
+    font-size: 0.9rem;
+}
+
+/* ================= FOOTER ================= */
+.footer {
+    background-color: var(--light-gray);
+    padding: 30px 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 20px;
+}
+
+.footer-logo {
+    display: flex;
+    align-items: center;
+    font-weight: bold;
+    font-size: 1.2rem;
+}
+
+.footer-links { display: none; /* Oculto en móvil */ }
+
+.footer-social {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+}
+
+.social-icons {
+    display: flex;
+    gap: 15px;
+}
+
+.icon {
+    width: 30px; height: 30px;
+    background-color: #666; color: white;
+    display: flex; justify-content: center; align-items: center;
+    border-radius: 4px; font-weight: bold;
+}
+
+/* ================= MEDIA QUERIES ================= */
+
+/* Tablet (768px - 1023px) */
+@media (min-width: 768px) {
+    .cards-container {
+        flex-direction: row;
+        flex-wrap: wrap;
+    }
+    
+    .card {
+        flex-direction: column; /* Cambia a vertical */
+        flex: 1 1 calc(50% - 15px); /* 2 columnas */
+    }
+
+    .card-image {
+        width: 100%;
+        height: 150px;
+    }
+
+    .card-content {
+        width: 100%;
+    }
+
+    /* Footer Tablet (Alineado con flex) */
+    .footer {
+        flex-direction: row;
+        justify-content: space-between;
+    }
+}
+
+/* Escritorio (>= 1024px) */
+@media (min-width: 1024px) {
+    .navbar { padding: 15px 40px; }
+    .hamburger { display: none; }
+    
+    .nav-links {
+        display: flex;
+        list-style: none;
+        gap: 20px;
+    }
+
+    .nav-links a {
+        text-decoration: none;
+        color: var(--text-dark);
+        font-weight: 500;
+    }
+    .nav-links a.active { color: var(--primary-blue); border-bottom: 2px solid var(--primary-blue); }
+
+    .search-box {
+        display: block;
+    }
+    .search-box input {
+        padding: 8px 15px;
+        border-radius: 20px;
+        border: 1px solid var(--border-color);
+    }
+
+    .hero {
+        flex-direction: row; /* Hero a 2 columnas */
+        align-items: center;
+        padding: 60px 40px;
+    }
+
+    .hero-content {
+        flex: 1;
+        padding-right: 40px;
+    }
+
+    .hero-image-slider {
+        flex: 1;
+    }
+
+    .destinations { padding: 40px; }
+
+    .card {
+        flex: 1 1 calc(25% - 15px); /* 4 columnas */
+    }
+
+    .footer {
+        padding: 40px;
+        align-items: flex-start;
+        text-align: left;
+    }
+    
+    .footer-links {
+        display: block;
+    }
+
+    .footer-links h4 { margin-bottom: 10px; }
+    .footer-links ul { list-style: none; }
+    .footer-links li { margin-bottom: 5px; }
+    .footer-links a { text-decoration: none; color: var(--text-gray); }
+    
+    .footer-social {
+        align-items: flex-end;
+    }
+}
